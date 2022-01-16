@@ -28,31 +28,34 @@ function displayResults(weather){
     let now = new Date();
     let date = document.querySelector('.location .date');
     date.innerHTML = dateBuilder(now);
+
+    let temp = document.querySelector('.temp');
+    temp.innerHTML = `${weather.main.temp}`;
 }
 
 function dateBuilder(i){
     let months = [
-        'January', 
-        'February', 
-        'March', 
-        'April', 
-        'May', 
-        'June', 
-        'Juiy', 
-        'August', 
-        'September', 
-        'October', 
-        'November', 
-        'December'
+        "January", 
+        "February", 
+        "March", 
+        "April", 
+        "May", 
+        "June", 
+        "Juiy", 
+        "August", 
+        "September", 
+        "October", 
+        "November", 
+        "December",
     ];
     let days = [
-        'Sunday', 
-        'Monday', 
-        'Tuesday', 
-        'Wednesday', 
-        'Thursday', 
-        'Friday', 
-        'Saturday'
+        "Sunday", 
+        "Monday", 
+        "Tuesday", 
+        "Wednesday", 
+        "Thursday", 
+        "Friday", 
+        "Saturday",
     ];
 
     let day = days[i.getDay()];
